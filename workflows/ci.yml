@@ -1,0 +1,21 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run Jenkins job
+      run: |
+        JENKINS_URL="http://your-jenkins-url"
+        JENKINS_JOB="your-jenkins-job"
+        JENKINS_USER="your-jenkins-username"
+        JENKINS_TOKEN="${{ secrets.JENKINS_TOKEN }}"
+        
+        curl -X POST "${JENKINS_URL}/job/${JENKINS_JOB}/build" \
+          --user "${JENKINS_USER}:${JENKINS_TOKEN}"
