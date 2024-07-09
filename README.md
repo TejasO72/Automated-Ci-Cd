@@ -142,4 +142,4 @@ Before you begin, ensure you have met the following requirements:
 - Update the `deploy.sh` script with the correct EC2 user, host, and path.
 
 
-Made with ❤️ by [Tejas Tabrej]
+Made with ❤️ by Tejas Tabrej [CHAOSO72]
